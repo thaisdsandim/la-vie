@@ -41,11 +41,7 @@ const psicologoController = {
     const { nome, email, senha, apresentacao } = req.body
 
     try {
-
-      if(!nome | !email | !senha | !apresentacao){
-        return res.status(400).json("informe nome, email, senha e apresentação")
-      }
-
+      
       const usuarioSalvo = await Psicologos.count({
         where: {
           email,
@@ -79,9 +75,7 @@ const psicologoController = {
 
     try {
 
-      if(!nome | !email | !senha | !apresentacao){
-        return res.status(400).json("informe nome, email, senha e apresentação")
-      }
+      const senhaHash = bcrypt.hashSync(senha, 8)
 
       if(psicologoSalvo){
         const cadastroAtualizado = await Psicologos.update(
@@ -99,7 +93,7 @@ const psicologoController = {
         )
   
         res.status(200).json({
-          nome, email, senha, apresentacao
+          nome, email, senha: senhaHash, apresentacao
         })
 
       }else {
