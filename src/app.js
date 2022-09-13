@@ -1,4 +1,5 @@
 const express = require("express")
+const handleError = require("./middlewares/handleError")
 const routes = require("./routes")
 
 const db = require("./database")
