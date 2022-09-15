@@ -1,5 +1,4 @@
 const Pacientes = require("../models");
-const bcrypt = require("bcryptjs");
 
 const pacienteController = {
     listarPacientes: async (req, res) => {
@@ -32,7 +31,7 @@ const pacienteController = {
     },
 
     cadastrarPaciente: async(req, res) => {
-        const { nome, email, idade, } = req.body
+        const { nome, email, idade } = req.body
 
         try {
             const pacienteCadastrado = await Pacientes.count({
@@ -57,7 +56,7 @@ const pacienteController = {
 
     atualizarPaciente: async (req, res) => {
         const { id } = req.params;
-        const { nome, email, idade, } = req.body;
+        const { nome, email, idade } = req.body;
         const pacienteSalvo = await Pacientes.findByPk(id);
 
         try {
@@ -79,7 +78,7 @@ const pacienteController = {
                     nome, email, idade
                 })
             } else{
-                res.status(404).json("id nao encontrado")
+                res.status(404).json("id não encontrado")
             }
         }
         catch(error) {
@@ -98,7 +97,7 @@ const pacienteController = {
                         id
                     }
                 })
-                return res.status(204).json("Paciente deletado com sucesso.")
+                return res.status(204).json("paciente deletado com sucesso")
 
             } else{
                 return res.status(404).json("id não encontrado")
@@ -108,3 +107,5 @@ const pacienteController = {
         }
     }
 }
+
+module.exports = pacienteController
