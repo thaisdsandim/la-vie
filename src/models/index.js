@@ -1,3 +1,17 @@
-const Psicologos = require("./Psicologos")
+const Atendimentos = require('./Atendimentos');
+const Psicologos = require('./Psicologos');
+const Pacientes = require('./Pacientes');
 
-module.exports = Psicologos
+Atendimentos.belongsTo(Pacientes, {
+    foreignKey: 'paciente_id'
+})
+
+Atendimentos.belongsTo(Psicologos, {
+    foreignKey: 'psicologo_id'
+})
+
+module.exports = {
+    Atendimentos,
+    Psicologos,
+    Pacientes
+}
