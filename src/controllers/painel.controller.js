@@ -1,4 +1,4 @@
-const { Atendimentos, Psicologos, Pacientes } = require('../model') 
+const { Atendimentos, Psicologos, Pacientes } = require('../models') 
 
 const painelController = {
 

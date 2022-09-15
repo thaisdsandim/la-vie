@@ -1,4 +1,4 @@
-const Psicologos = require("../models")
+const { Psicologos } = require("../models")
 const bcrypt = require("bcryptjs")
 
 const psicologoController = {
