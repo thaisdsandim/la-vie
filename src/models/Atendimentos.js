@@ -47,4 +47,5 @@ const Atendimentos = db.define(
         timestamps: false
     }
 )
+
 module.exports = Atendimentos;
