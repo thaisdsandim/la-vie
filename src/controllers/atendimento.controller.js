@@ -1,4 +1,3 @@
-// const AtendimentosController = require('../../^/untitled/ts-nul-authority/Untitled-1');
 const { Atendimentos, Pacientes, Psicologos } = require('../models');
 
 const attendances = {
@@ -35,19 +34,19 @@ const attendances = {
         }
     },
     async registerAttendance (req, res) {
-        const token = req.auth.id;
+        const { psicologo_id } = req.auth;
         try {
             const { paciente_id, data_atendimento, observacao } = req.body;
             const newAttendance = await Atendimentos.create({
                 paciente_id,
                 data_atendimento,
                 observacao,
-                psicologo_id: token 
+                psicologo_id 
             }
             );
             return res.status(201).json(newAttendance);
         } catch (e) {
-            res.status(400).json("Não foi possível reservar o atendimento");
+            res.status(400).json("Não foi possível registrar o atendimento");
         }
     }
 }

@@ -12,6 +12,7 @@ const psicologosUpdateValidation = require("../validations/psicologos/update")
 const pacientesCreateValidation = require("../validations/pacientes/create")
 const pacientesUpdateValidation = require("../validations/pacientes/update")
 const authLoginValidation = require("../validations/auth/login")
+const atendimentosCreateValidation = require("../validations/atendimentos/create")
 
 const routes = express.Router()
 
@@ -21,17 +22,17 @@ routes.post("/psicologos", psicologosCreateValidation, psicologoController.cadas
 routes.put("/psicologos/:id", psicologosUpdateValidation, psicologoController.atualizarCadastro)
 routes.delete("/psicologos/:id", psicologoController.deletarPsicologo)
 
-routes.post("/login",authLoginValidation, authController.login)
+routes.post("/login", authLoginValidation, authController.login)
 
 routes.get("/pacientes", pacienteController.listarPacientes)
 routes.get("/pacientes/:id", pacienteController.getOne)
 routes.post("/pacientes", pacientesCreateValidation, pacienteController.cadastrarPaciente)
-routes.put("/pacientes/:id", pacientesUpdateValidation, pacienteController.atualizarCadastro)
+routes.put("/pacientes/:id", pacientesUpdateValidation, pacienteController.atualizarPaciente)
 routes.delete("/pacientes/:id", pacienteController.deletarPaciente)
 
 routes.get('/atendimentos', AtendimentosController.listAttendances);
 routes.get('/atendimentos/:id', AtendimentosController.listOfAttendance);
-routes.post('/atendimentos', AtendimentosController.registerAttendance);
+routes.post('/atendimentos', auth, atendimentosCreateValidation, AtendimentosController.registerAttendance);
 
 routes.get('/painel/atendimentos', painel.numberAtendimentos);
 routes.get('/painel/psicologos/media', painel.atendimentoPsicologo);
