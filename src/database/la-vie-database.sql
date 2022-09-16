@@ -6,7 +6,7 @@ create table psicologos(
 	id integer not null auto_increment primary key,
     nome varchar(245),
     email varchar(245) unique,
-    senha varchar(8),
+    senha varchar(100),
     apresentacao varchar(500)
 );
 
@@ -26,6 +26,8 @@ create table atendimentos(
     constraint fk_paciente_id foreign key (paciente_id) references pacientes(id),
     constraint fk_psicologo_id foreign key (psicologo_id) references psicologos(id)
 );
+
+-- para popular o banco:
 
 insert into psicologos values(null, "Mariana", "mariana@gmail.com", "12345678", "Psicóloga existencial-humanista");
 insert into psicologos values(null, "Juliana", "juliana@gmail.com", "12345678", "Psicóloga analítico-comportamental");
