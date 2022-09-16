@@ -14,11 +14,11 @@ const Pacientes = db.define("Pacientes", {
         type: DataTypes.STRING,
     },
     idade: {
-        type: DataTypes
+        type: DataTypes.DATEONLY
     }
 }, {
     timestamps: false,
-    tableName: 'Pacientes'
+    tableName: 'pacientes'
 });
 
 module.exports = Pacientes;
