@@ -5,7 +5,7 @@ module.exports = (error, req, res, next) => {
     return res.status(error.statusCode).json(error)
   }
 
-  if(error instanceof UnauthorizedError){
+  else if(error instanceof ReferenceError){
     return res.status(error.status).json(error)
   }
 
