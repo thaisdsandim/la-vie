@@ -11,12 +11,20 @@
 
 ## :hammer: Functionalities
 
-- `1`: Psychologist login
-- `2`: 
-- `3`: 
-- `4`: 
-- `5`: 
-- `6`: 
+- `01`: Psychologist login
+- `02`: List all registered psychologists
+- `03`: List registered psychologist by id
+- `04`: Submit psychologist registration
+- `05`: Update psychologist registration
+- `06`: Delete psychologist registration
+- `07`: List all registered patients
+- `08`: List registered patient by id
+- `09`: Submit patient registration
+- `10`: Update patient registration
+- `11`: Delete patient registration
+- `12`: List all consultations performed by all psychologists
+- `13`: List registered consultation by id
+- `14`: Submit consultation registration
 
 
 ## 📁 Documentation
@@ -87,15 +95,15 @@ Requests to this API must follow the standards:
     </td>
     <td align="center">
       <a href="https://github.com/eduardmuniz">
-        <img src="https://avatars.githubusercontent.com/u/109393530?v=4" width="100px;" alt="Photo of Eduardo Muniz on GitHub"/><br>
+        <img src="https://ca.slack-edge.com/T03GMFFKYLW-U03LTA89T1P-932b0a3dfb62-512" width="100px;" alt="Photo of Eduardo Muniz on GitHub"/><br>
         <sub>
           <b>Eduardo Muniz</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="">
-        <img src="" width="100px;" alt="Photo of Guilherme da Rocha on GitHub"/><br>
+      <a href="https://github.com/guisdarocha">
+        <img src="https://avatars.githubusercontent.com/u/109170496?v=4" width="100px;" alt="Photo of Guilherme da Rocha on GitHub"/><br>
         <sub>
           <b>Guilherme da Rocha</b>
         </sub>
