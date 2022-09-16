@@ -1,7 +1,7 @@
 # <img src="https://github.com/eduardohpb/HandsOn3-LaVie/raw/main/HandsOn3%20-%20LaVie/img/Image%2027-07-22%20at%2020.53.jpeg" height="100"/>
 
 <p align="left">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=UNDER%20DEVELOPMENT&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=READY&color=GREEN&style=for-the-badge"/>
 <img src="https://img.shields.io/github/languages/count/MonicaIacy/la-vie?style=for-the-badge"/>
 <img src="https://img.shields.io/github/repo-size/MonicaIacy/la-vie?style=for-the-badge"/>
 </p>
