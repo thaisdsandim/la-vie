@@ -39,22 +39,6 @@ You can access the documentation [here](https://drive.google.com/file/d/1S51aOoe
 <a href="https://nodejs.org/en/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="node" width="40" height="40"/> </a> <a href="https://www.mysql.com/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="mysql" width="40" height="40"/> </a>
 
 
-## ⚙️ Installation
-
-Clone this project and do the following steps:
-
-```sh
-$ cd la-vie
-$ npm install
-```
-After installing dependencies, create an empty database and configure the connection settings in the config/database.js file and proceed with the following commands:
-```sh
-$ npx sequelize migrate
-$ node index.js
-```
-Then the necessary tables will be created and the server will be uploaded. To access, just enter http://localhost:3000
-
-
 ## 📝 Methods
 Requests to this API must follow the standards:
 | Method | Description |
